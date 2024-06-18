@@ -1,0 +1,142 @@
+<!DOCTYPE html><!--Сообщаем браузеру как стоит читать эту страницу-->
+<html lang="ru"><!--Оболочка документа, указывает язык содержимого-->
+<head>
+    <meta charset="UTF-8"><!--Указывает кодировку для поддержания сиволов из различных языков-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Этот тег используется для настройки масштабирования и отображения страницы на мобильных устройствах.width=device-width говорит браузеру использовать ширину экрана устройства в качестве ширины окна просмотра. Атрибут initial-scale=1.0 устанавливает начальный масштаб страницы, что обычно означает, что страница открывается в естественном масштабе без увеличения или уменьшения.-->
+    <meta name="description" content="Выставка «Коллаж: создать из разрушенного» исследует процесс создания нового из обломков и обрезков. Художники трансформируют разрушенные изображения в уникальные миры, используя свою творческую силу.">
+    <meta name="keywords" content="Коллаж, искусство коллажа, создание из разрушенного, выставка, творческая сила, художники, обломки, обрезки, новые миры, Татьяна Алмонд, Анна Белова, красота, Музей истории фотографии">
+<!--Ключевые слова-->
+    <link rel="shortcut icon" href="../Assets/Images/fav/fav.png"><!--Фавикон-->
+    <title>Выставка</title><!--Заголовок страницы-->
+    <link rel="stylesheet" href="../Assets/CSS/main.css"><!--Подключаем css-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!--Подключаем библиотеку с анимацией-->
+    <script src="../Assets/JS/wow.min.js"></script><!--Подключаем JS для анимации-->
+    <script>
+        new WOW().init();
+    </script><!--Скрипт для реализации анимации по скроллу-->
+</head>
+<body class="body font-Rubik"><!--Назначаем шрифт для всего тела-->
+    <header class="header"><!--Шапка-->
+        <div class="main-container flex items-center justify-between"><!--Назначили с помощью ширину 100%, назначили флекс, items-center -выровнил элементы по вертикали, justify-between - расставил элементы с максимальным расстоянием между ними -->
+            <a href="../index.html"><!--Ссылка на главную страницу-->
+                <img src="../Assets/Images/header/logo.png" alt="Логотип" class="w-14"><!--Назначаем размер логотипа 3.5rem, тоесть 56px(3.5*16)-->
+            </a>
+            <nav id="menu" class="header-menu max-lg:top-0 max-lg:-translate-y-full"><!--Обращаемся к id для js, чтобы адаптировать меню для мобильных устройств, max-lg:top-0 прижимает шапку к верхней части экрана для ширины экрана 1024px и выше,-->
+                <a href="news.html" class="header-link">Новости</a><!--Этот код создает декоративную линию под ссылкой (.header-link), которая анимируется при наведении курсора. Линия изначально невидима (ширина 0px), но при наведении она плавно расширяется до полной ширины. Это достигается с помощью псевдоэлемента ::after и свойств CSS для анимации и переходов.-->
+                <a href="expositions.html" class="header-link header-link-active">Выставки</a>
+                <a href="error.html"header-link">Публикации</a>
+                <a href="equipment.html" class="header-link">Коллекция техники</a>
+                <a href="tales.html" class="header-link">Байки от хранителя</a>
+                <a href="reviews.html" class="header-link">Отзывы</a>
+            </nav>
+            <button id="toggler"><!--Обращаемся к кнопке бургера для вызова меню с помощью js-->
+                <img src="../Assets/Images/header/menu.svg" alt="Бургер" class="w-8 h-8"><!--Назначаем размер иконки 2 rem или 32px -->
+            </button>
+        </div>
+    </header><!--Конец шапки-->
+    <!--Начало главного экрана-->
+    <section id="hero" class="min-h-screen bg-[url('../Images/publications/publications_5.jpg')] max-lg:bg-center bg-cover w-full flex items-end text-white relative">
+        <!--Назначаем id для ссылки на этот элемент, min-h-screen устанавливающая минимальную высоту элемента в размере экрана (100vh),
+         Устанавливает фоновое изображение по центру на экранах шириной lg и меньше,
+        Устанавливает фоновое изображение так, чтобы оно покрывало весь элемент, сохраняя пропорции.. -->
+        <div class="container mx-auto max-w-[1340px] px-4 relative z-[1]">
+            <div class="flex max-md:flex-col items-center gap-6 md:justify-between mb-16">
+                <p class="uppercase text-3xl md:text-4xl xl:text-6xl font-Playfair font-extrabold max-md:text-center animate__animated animate__fadeInLeft">«Коллаж: создать из разрушенного»</p>
+                <div class="flex items-center gap-4 animate__animated animate__fadeInRight shrink-0">
+                    <a href="exposition4.html">
+                        <img src="../Assets/Images/publications/arrow-left.png" alt="влево" class="w-10 h-10">
+                    </a>
+                    <a href="exposition6.html">
+                        <img src="../Assets/Images/publications/arrow-right.png" alt="вправо" class="w-10 h-10">
+                    </a>
+                </div>
+            </div>
+        </div>
+       <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+    </section>
+    <!--Конец главного экрана-->
+    <main class="container mx-auto max-w-[1340px] px-4 my-14 flex flex-col gap-14 text-base md:text-lg xl:text-xl tracking-wider">
+        <p class="text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold tracking-normal wow animate__animated animate__fadeInUp">«Коллаж: создать из разрушенного»</p>
+        <p class="wow animate__animated animate__fadeInUp">
+            Разрушение необходимо, чтобы из обломков, обрезков, обрывков родилось что-то совершенно новое, одновременно иное и родное тому, что дало ему жизнь. Разрушение изначального изображения у коллажа в ДНК, в самой его сути. Иногда разрушает кто-то другой, а художник обнаруживает эти случайные фрагменты и пересобирает их в новые миры. Часто автор коллажа и сам становится страстным разрушителем: он рвёт фотографии и книги, распарывает ножницами выкрасы и журналы. Но лишь для того, чтобы своими умелыми руками и чутким сердцем создать новый мир — свой коллаж.
+        </p>
+        <p class="wow animate__animated animate__fadeInUp">
+            «Когда ты создаёшь — сила в твоих руках», — так говорили философы. И мы принимаем эту силу, присваиваем себе право быть творцами миров, где ветви бросают тени на стены музея, а в подводном царстве правят мудрые принцессы, где лебеди обнимают белыми крыльями и звучит смех. Миров, в которых есть место словам и тишине, строгой геометрии и случайным брызгам краски. Здесь водятся тигры и снегири. Здесь мир!
+        </p>
+        <p class="wow animate__animated animate__fadeInUp">
+            В нашей выставке-интервенции приняли участие 22 автора из разных городов России. Работы хитро вплетены в основную экспозицию Музея истории фотографии. Мы будем рады если внимательный зритель найдёт все наши коллажные сокровища и вместе с авторами работ поразмышляет о том, какой разной бывает красота. Ведь она может случиться из чего угодно и иногда нужно принять разрушение старого, чтобы позволить прорасти новой красоте.
+        </p>
+        <p class="wow animate__animated animate__fadeInUp">
+            Приятного просмотра! Надеемся, наши коллажи помогут вам принять силу творить. Она ваша по праву.
+        </p>
+        <p class="wow animate__animated animate__fadeInUp">
+            Кураторы выставки: Татьяна Алмонд и Анна Белова
+        </p>
+        <div class="grid grid-cols-6 gap-4 wow animate__animated animate__fadeInUp">
+            <img src="../Assets/Images/publications/5_1.jpg" alt="Фото1" class="col-span-full w-full md:col-span-2">
+            <img src="../Assets/Images/publications/5_2.jpg" alt="Фото2" class="col-span-full w-full md:col-span-2">
+            <img src="../Assets/Images/publications/5_3.jpg" alt="Фото3" class="col-span-full w-full md:col-span-2">
+            <img src="../Assets/Images/publications/5_4.jpg" alt="Фото4" class="col-span-full w-full md:col-span-3">
+            <img src="../Assets/Images/publications/5_5.jpg" alt="Фото5" class="col-span-full w-full md:col-span-3">
+            <img src="../Assets/Images/publications/5_6.jpg" alt="Фото6" class="col-span-full w-full md:col-span-3">
+            <img src="../Assets/Images/publications/5_7.jpg" alt="Фото7" class="col-span-full w-full md:col-span-3">
+        </div>
+    </main>
+
+    <footer class="mt-auto w-full bg-black py-4 text-white">
+        <div class="container mx-auto max-w-[1340px] px-4 flex flex-col gap-12">
+            <a href="../index.html">
+                <img src="../Assets/Images/header/logo.png" alt="" class="w-16">
+            </a>
+            <div class="flex max-lg:flex-col gap-6 xl:gap-8 text-base md:text-lg xl:text-xl">
+                <div class="flex flex-col gap-8 font-medium text-xl md:text-2xl xl:text-3xl text-[#c51d41]">
+                    <a href="news.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Новости</a>
+                    <a href="expositions.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Выставки</a>
+                    <a href="error.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Публикации</a>
+                    <a href="equipment.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Коллекция техники</a>
+                    <a href="tales.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Байки от хранителя</a>
+                    <a href="reviews.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Отзывы</a>
+                </div>
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>             
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Музей истории фотографии</p>  
+                    <p>Санкт-Петербург,<br> метро Петроградская,<br> ул. Профессора Попова, 23</p>
+                </div>                
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>          
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Связать с нами</p>  
+                    <div class="flex flex-col gap-2">
+                        <a class="transition-all duration-500 hover:opacity-50" href="tel:+7 (812) 346-18-50">+7 (812) 346-18-50</a>
+                        <a class="transition-all duration-500 hover:opacity-50" href="tel:+7 (911) 722-92-17">+7 (911) 722-92-17</a>
+                        <a class="transition-all duration-500 hover:opacity-50" href="mailto:photohismus@gmail.com">photohismus@gmail.com</a>
+                    </div>
+                </div>
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>          
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Больше нас</p>  
+                    <div class="flex items-center gap-6">
+                        <a href="https://vk.com/mif_popova_23" target="_blank">
+                            <img src="../Assets/Images/footer/vk.png" alt="" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://t.me/mifspb" target="_blank">
+                            <img src="../Assets/Images/footer/tg.png" alt="" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=79117229217&text&type=phone_number&app_absent=0" target="_blank">
+                            <img src="../Assets/Images/footer/whatsapp.png" alt="" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </footer>
+
+    <button id="to-top-button" onclick="goToTop()" class="hidden fixed z-[4] bottom-5 md:bottom-8 right-5 md:right-8 w-12 h-12">
+        <img src="../Assets/Images/footer/arrow.png" alt="">               
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>

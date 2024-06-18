@@ -1,0 +1,314 @@
+<!DOCTYPE html><!--Сообщаем браузеру как стоит читать эту страницу-->
+<html lang="ru"><!--Оболочка документа, указывает язык содержимого-->
+<head>
+    <meta charset="UTF-8"><!--Указывает кодировку для поддержания сиволов из различных языков-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Этот тег используется для настройки масштабирования и отображения страницы на мобильных устройствах.width=device-width говорит браузеру использовать ширину экрана устройства в качестве ширины окна просмотра. Атрибут initial-scale=1.0 устанавливает начальный масштаб страницы, что обычно означает, что страница открывается в естественном масштабе без увеличения или уменьшения.-->
+    <meta name="description" content="Ознакомьтесь с текущими и предстоящими выставками музея истории фотографии. Откройте для себя уникальные экспозиции и мероприятия.">
+    <meta name="keywords" content="выставки, музей истории фотографии, экспозиции, мероприятия, искусство, культура, фотография"><!--Ключевые слова-->
+    <link rel="shortcut icon" href="../Assets/Images/fav/fav.png"><!--Фавикон-->
+    <title>Выставки</title><!--Заголовок страницы-->
+    <link rel="stylesheet" href="../Assets/CSS/main.css"><!--Подключаем css-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!--Подключаем библиотеку с анимацией-->
+    <script src="../Assets/JS/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script><!--Скрипт для реализации анимации по скроллу-->
+</head>
+<body class="body font-Rubik">
+    <header class="header">
+        <div class="main-container flex items-center justify-between">
+            <a href="../index.html">
+                <img src="../Assets/Images/header/logo.png" alt="Логотип" class="w-14">
+            </a>
+            <nav id="menu" class="header-menu max-lg:top-0 max-lg:-translate-y-full">
+                <a href="news.html" class="header-link">Новости</a>
+                <a href="expositions.html" class="header-link header-link-active">Выставки</a>
+                <a href="error.html" class="header-link">Публикации</a>
+                <a href="equipment.html" class="header-link">Коллекция техники</a>
+                <a href="tales.html" class="header-link">Байки от хранителя</a>
+                <a href="reviews.html" class="header-link">Отзывы</a>
+            </nav>
+            <button id="toggler">
+                <img src="../Assets/Images/header/menu.svg" alt="" class="w-8 h-8">
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="w-full flex flex-col gap-10">
+        <div class="flex flex-col min-h-screen items-center justify-center gap-14 px-4">
+            <p class="uppercase text-3xl md:text-4xl xl:text-6xl font-Playfair font-extrabold wow animate__animated animate__backInUp">Выставки</p>
+            <img src="../Assets/Images/hero/Маскот_выставки.png" alt="Маскот_выставки" class="w-full md:w-1/2 lg:w-1/3 wow animate__animated animate__backInUp">
+        </div>
+        <div class="w-full min-h-screen flex items-center py-8 md:py-10 xl:py-12 bg-[#dadada]">
+            <div class="container mx-auto max-w-[1340px] px-4 flex items-center max-lg:flex-col gap-8">
+                <a href="exposition1.html" class="w-full lg:w-1/2 wow animate__animated animate__fadeInLeft">
+                    <img src="../Assets/Images/expositions/exhibition_1.png" alt="Внутренний лес" class="w-full">
+                </a>
+                <div class="flex flex-col gap-6 w-full lg:w-1/2 max-lg:text-center max-lg:order-first">
+                    <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold wow animate__animated animate__fadeInRight">Текущая выставка</p>
+                    <a href="exposition1.html" class="text-xl md:text-2xl xl:text-3xl wow animate__animated animate__fadeInRight">
+                        Внутренний лес <br>
+                        Елена Харитонова   
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="container mx-auto max-w-[1340px] px-4 my-14 flex flex-col gap-14">
+        <div class="flex flex-col gap-8">
+            <div class="flex items-center gap-4">
+                <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold max-lg:text-center wow animate__animated animate__fadeInUp">Архив выставок</p>
+                <img src="../Assets/Images/publications/icon_card.png" alt="Иконка выставки" class="w-10 xl:w-14 h-10 xl:h-14">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 text-base md:text-lg xl:text-xl wow animate__animated animate__fadeInUp">
+                <!--grid - Назначаем блоку грид контейнер,
+                grid-cols-1 - Устанавливает одну колонку в сетке для мобильных устройств,
+                md:grid-cols-2 - Устанавливает две колонки для экранов размеров от 768px,
+                xl:grid-cols-3 - Устанавливает три колонки для экранов размера от 1280px.
+                gap-6 - Устанавливает промежуток между элементами сетки размером 40px.
+                text-base md:text-lg xl:text-xl - Устанавливает размер текста 16px для экранов меньше 768px, 
+                18px для экранов от 768pх до 1279px, 20px для экранов от 1280px.-->
+                <a href="exposition1.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full"><!--relative - Устанавливает относительное позиционирование для контейнера, 
+                        что позволяет использовать абсолютное позиционирование для дочерних элементов.
+                        group - Группирует элементы для применения стилей при наведении курсора.
+                        w-full: Устанавливает ширину контейнера на 100%.-->
+                        <img src="../Assets/Images/expositions/exhibition_1.png" alt="Выставка_1" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <!--transition-all duration-500 - делает плавный переход всех свойств за 500 миллисекунд.
+                        object-cover - беспечивает обрезку изображения для заполнения контейнера.
+                        aspect-square - станавливает соотношение сторон 1:1, чтобы получился квадрат.
+                        absolute z-[1] top-0 left-0 - устанавливаем абсолютное позиционирование, слой 1, размещение в верхнем левом углу.
+                        group-hover:opacity-0 -  Устанавливаем прозрачность 0 при наведении курсора на родительский элемент с классом group.-->
+                        <img src="../Assets/Images/expositions/card_1.png" alt="Карточка_1" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Текущая выставка "Внутренний лес"</p>
+                </a>
+                <a href="exposition2.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_2.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_2.png" alt="Карточка_2" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Так далеко, ТАК БЛИЗКО. В поисках острова Беринга»</p>
+                </a>
+                <a href="exposition3.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_3.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_3.png" alt="Карточка_3" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Практика осознанных сновидений»</p>
+                </a>
+                <a href="exposition4.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_4.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_4.png" alt="Карточка_4" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Коллаж: создать из разрушенного»</p>
+                </a>
+                <a href="exposition5.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_5.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_5.png" alt="Карточка_5" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Город, в котором мы видели этих людей»</p>
+                </a>
+                <a href="exposition6.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_6.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_6.png" alt="Карточка_6" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Солнце. Море. Пляж»</p>
+                </a>
+                <a href="exposition7.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_7.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_7.png" alt="Карточка_7" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Ритуал и обычай. Японская фотография эпохи Мэйдзи»</p>
+                </a>
+                <a href="exposition8.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_8.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_8.png" alt="Карточка_8" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Алла Полетаева. «Сила большой воды».</p>
+                </a>
+                <a href="exposition9.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_9.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_9.png" alt="Карточка_9" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Фотограф Серебряного века. Светопись художника Эберлинга</p>
+                </a>
+                <a href="exposition10.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_10.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_10.png" alt="Карточка_10" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Миф люминографии»</p>
+                </a>
+                <a href="exposition11.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_11.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_11.png" alt="Карточка_11" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Дама с собачкой, господин с котом»</p>
+                </a>
+                <a href="exposition12.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_12.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_12.png" alt="Карточка_12" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Валентин Самарин «Сказка-Sanki — Фотография Души Человека»</p>
+                </a>
+                <a href="exposition13.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_13.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_13.png" alt="Карточка_13" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Коллаж: внутри и за пределами фотографии»</p>
+                </a>
+                <a href="exposition14.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_14.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_14.png" alt="Карточка_14" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Фотомонтаж: ХХI век»</p>
+                </a>
+                <a href="exposition15.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_15.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_15.png" alt="Карточка_15" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Счастье в круге. Эпизод 2»</p>
+                </a>
+                <a href="exposition16.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_16.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_16.png" alt="Карточка_16" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Валерий Коньков «Моногород. Структуры памяти»</p>
+                </a>
+                <a href="exposition17.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_17.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_17.png" alt="Карточка_17" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Рафал Милах «7 комнат»</p>
+                </a>
+                <a href="exposition18.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_18.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_18.png" alt="Карточка_18" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Андрей Полушкин «Реконструкция памяти»</p>
+                </a>
+                <a href="exposition19.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_19.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_19.png" alt="Карточка_19" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Императорская Россия при Николае II. Виды и типы»</p>
+                </a>
+                <a href="exposition20.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_20.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_20.png" alt="Карточка_20" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Владимир Никитин «Квадратура круга»</p>
+                </a>
+                <a href="exposition21.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_21.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_21.png" alt="Карточка_21" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Семен Михайлович Моргенштерн</p>
+                </a>
+                <a href="exposition22.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_22.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_22.png" alt="Карточка_22" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. «Торжество имитации»</p>
+                </a>
+                <a href="exposition23.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_23.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_23.png" alt="Карточка_23" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Александр Русов «Знаки препинания»</p>
+                </a>
+                <a href="exposition24.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_24.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_2.png" alt="Карточка_24" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Текущая выставка "Внутренний лес"</p>
+                </a>
+                <a href="exposition25.html" class="flex flex-col gap-4">
+                    <div class="relative group w-full">
+                        <img src="../Assets/Images/expositions/expositions_25.jpg" alt="" class="w-full transition-all duration-500 object-cover aspect-square absolute z-[1] top-0 left-0 group-hover:opacity-0">
+                        <img src="../Assets/Images/expositions/card_3.png" alt="Карточка_25" class="w-full transition-all duration-500 object-cover aspect-square">
+                    </div>
+                    <p>Архив. Вита Буйвит «Трудодни»</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-auto w-full bg-black py-4 text-white">
+        <div class="container mx-auto max-w-[1340px] px-4 flex flex-col gap-12">
+            <a href="../index.html">
+                <img src="../Assets/Images/header/logo.png" alt="" class="w-16">
+            </a>
+            <div class="flex max-lg:flex-col gap-6 xl:gap-8 text-base md:text-lg xl:text-xl">
+                <div class="flex flex-col gap-8 font-medium text-xl md:text-2xl xl:text-3xl text-[#c51d41]">
+                    <a href="news.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Новости</a>
+                    <a href="expositions.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Выставки</a>
+                    <a href="error.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Публикации</a>
+                    <a href="equipment.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Коллекция техники</a>
+                    <a href="tales.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Байки от хранителя</a>
+                    <a href="reviews.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Отзывы</a>
+                </div>
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>             
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Музей истории фотографии</p>  
+                    <p>Санкт-Петербург,<br> метро Петроградская,<br> ул. Профессора Попова, 23</p>
+                </div>                
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>          
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Связать с нами</p>  
+                    <div class="flex flex-col gap-2">
+                        <a class="transition-all duration-500 hover:opacity-50" href="tel:+7 (812) 346-18-50">+7 (812) 346-18-50</a>
+                        <a class="transition-all duration-500 hover:opacity-50" href="tel:+7 (911) 722-92-17">+7 (911) 722-92-17</a>
+                        <a class="transition-all duration-500 hover:opacity-50" href="mailto:photohismus@gmail.com">photohismus@gmail.com</a>
+                    </div>
+                </div>
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>          
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Больше нас</p>  
+                    <div class="flex items-center gap-6">
+                        <a href="https://vk.com/mif_popova_23" target="_blank">
+                            <img src="../Assets/Images/footer/vk.png" alt="" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://t.me/mifspb" target="_blank">
+                            <img src="../Assets/Images/footer/tg.png" alt="" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=79117229217&text&type=phone_number&app_absent=0" target="_blank">
+                            <img src="../Assets/Images/footer/whatsapp.png" alt="" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </footer>
+
+    <button id="to-top-button" onclick="goToTop()" class="hidden fixed z-[4] bottom-5 md:bottom-8 right-5 md:right-8 w-12 h-12">
+        <img src="../Assets/Images/footer/arrow.png" alt="Якорь">               
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../Assets/JS/main.js"></script>
+</body>
+</html>
