@@ -1,0 +1,255 @@
+<!DOCTYPE html><!--Сообщаем браузеру как стоит читать эту страницу-->
+<html lang="ru"><!--Оболочка документа, указывает язык содержимого-->
+<head>
+    <meta charset="UTF-8"><!--Указывает кодировку для поддержания сиволов из различных языков-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Этот тег используется для настройки масштабирования и отображения страницы на мобильных устройствах.width=device-width говорит браузеру использовать ширину экрана устройства в качестве ширины окна просмотра. Атрибут initial-scale=1.0 устанавливает начальный масштаб страницы, что обычно означает, что страница открывается в естественном масштабе без увеличения или уменьшения.-->
+    <meta name="description" content="Музей истории фотографии предлагает посетителям уникальную коллекцию исторических фотографий, выставок и публикаций. Узнайте о расписании, событиях, коллекции техники и выставках музея."><!--Описание страницы-->
+    <meta name="keywords" content="музей, история фотографии, выставки, публикации, фотоискусство, экспозиции, фотографии, исторические фотографии, мероприятия, культура, фото техника"><!--Ключевые слова-->
+    <link rel="shortcut icon" href="Assets/Images/fav/fav.png"><!--Фавикон-->
+    <title>Музей истории фотографии</title><!--Заголовок страницы-->
+    <link rel="stylesheet" href="Assets/CSS/main.css"><!--Подключаем css-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><!--Подключаем библиотеку с анимацией-->
+    <script src="Assets/JS/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script><!--Скрипт для реализации анимации по скроллу-->
+</head>
+<body class="body font-Rubik"><!--Назначаем шрифт для всего тела-->
+    <header class="header"><!--Шапка-->
+        <div class="main-container flex items-center justify-between"><!--Назначили с помощью ширину 100%, назначили флекс, items-center -выровнил элементы по вертикали, justify-between - расставил элементы с максимальным расстоянием между ними -->
+            <a href="index.html"><!--Ссылка на главную страницу-->
+                <img src="Assets/Images/header/logo.png" alt="Логотип" class="w-14"><!--Назначаем размер логотипа 3.5rem, тоесть 56px(3.5*16)-->
+            </a>
+            <!--Список меню для шапки-->
+            <nav id="menu" class="header-menu max-lg:top-0 max-lg:-translate-y-full"><!--Обращаемся к id для js, чтобы адаптировать меню для мобильных устройств, max-lg:top-0 прижимает шапку к верхней части экрана для ширины экрана 1024px и выше,-->
+                <a href="Pages/news.html" class="header-link">Новости</a><!--Этот код создает декоративную линию под ссылкой (.header-link), которая анимируется при наведении курсора. Линия изначально невидима (ширина 0px), но при наведении она плавно расширяется до полной ширины. Это достигается с помощью псевдоэлемента ::after и свойств CSS для анимации и переходов.-->
+                <a href="Pages/expositions.html" class="header-link">Выставки</a>
+                <a href="Pages/error.html" class="header-link">Публикации</a>
+                <a href="Pages/equipment.html" class="header-link">Коллекция техники</a>
+                <a href="Pages/tales.html" class="header-link">Байки от хранителя</a>
+                <a href="Pages/reviews.html" class="header-link">Отзывы</a>
+            </nav>
+            <!--Конец списка меню для шапки-->
+            <button id="toggler"><!--Обращаемся к кнопке бургера для вызова меню с помощью js-->
+                <img src="Assets/Images/header/menu.svg" alt="" class="w-8 h-8"><!--Назначаем размер иконки 2 rem или 32px -->
+            </button>
+        </div>
+    </header><!--Конец шапки-->
+    <!--Вступительный экран-->
+    <section id="hero" class="min-h-screen bg-black w-full flex items-end text-white">
+        <div class="container mx-auto max-w-[1340px] px-4 flex items-center gap-10 max-lg:flex-col animate_animated animate__fadeInLeftBig">
+            <div class="flex flex-col gap-4 w-full lg:w-3/5">
+                <p class="uppercase text-3xl md:text-4xl xl:text-6xl font-Playfair font-extrabold animate__animated animate__bounceInLeft">Музей <br> истории <br> фотографии</p>
+                <p class="font-medium text-xl md:text-2xl xl:text-3xl animate__animated animate__bounceInLeft">ВТ-СБ <br> с 13:00 до 17:00</p>
+            </div>
+            <img src="Assets/Images/hero/Hero_maskot.gif" alt="Маскот" class="w-full sm:w-2/3 lg:w-1/2 xl:w-3/5">
+        </div>
+    </section>
+    <!--Конец вступительного экрана-->
+    <!--Конец вступительного экрана-->
+    <div id="popup" class="fixed transition-all duration-700 top-1/2 -translate-y-1/2 translate-x-[3000px] bg-white p-4 rounded-xl flex flex-col gap-6 z-[7]">
+        <p class="text-xl md:text-2xl xl:text-3xl">Записаться на мероприятие</p>
+        <input type="text" placeholder="Имя" class="bg-transparent focus:outline-none px-4 py-2 border-2 border-[#c51d41]/50 rounded-xl">
+        <input type="text" placeholder="Номер телефона" class="bg-transparent focus:outline-none px-4 py-2 border-2 border-[#c51d41]/50 rounded-xl">
+        <button class="px-4 py-2 rounded-lg border-2 border-black transition-all duration-500 hover:bg-black hover:text-white uppercase text-sm">Записаться</button>
+    </div>
+    <div id="popupOverlay" class="fixed inset-0 bg-black/50 h-screen z-[6] transition-all duration-500 -translate-x-full"></div>
+
+    <main class="container mx-auto max-w-[1340px] px-4 mt-14 flex flex-col gap-14 md:gap-20 xl:gap-36">
+        <div class="flex flex-col gap-8">
+            <div class="flex items-center gap-4">
+                <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold max-lg:text-center wow animate__animated animate__fadeInUp">Карта музея</p>
+                <img src="Assets/Images/map/icon_camera2.png" alt="Карта музея" class="w-10 xl:w-14 h-10 xl:h-14 wow animate__animated animate__fadeInUp">
+            </div>
+            <img src="Assets/Images/map/main.png" alt="Карта музея" class="w-full">
+            <div class="flex md:gap-12 max-md:flex-col text-base md:text-lg xl:text-xl wow animate__animated animate__fadeInUp">
+                <div class="flex flex-col">
+                    <p>1. Вход/Выход</p>
+                    <p>2. Гардероб</p>
+                    <p>3. Временные экспозиции</p>
+                    <p>4. Фотоателье</p>
+                    <p>5. Ретушь</p>
+                    <p>6. Стереофотография</p>
+                    <p>7. Сухие фотоматериалы</p>
+                    <p>8. Походная фотолабаратория</p>
+                </div>
+                <div class="flex flex-col">
+                    <p>9. Походная фотолабаратория</p>
+                    <p>10. Кодак</p>
+                    <p>11. Красня комната</p>
+                    <p>12. Иностранные фотоаппараты 20 века</p>
+                    <p>13. Туалет</p>
+                    <p>14. Советские фотоаппараты от А до Я</p>
+                    <p>15-17. Кинотехника</p>
+                </div>
+            </div>
+        </div> 
+        <div class="flex max-lg:flex-col gap-8">
+            <div class="flex flex-col gap-6 md:gap-10 xl:gap-16 w-full lg:w-1/2 wow animate__animated animate__fadeInUp">
+                <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold">Расписание музея</p>
+                <p class="font-medium text-xl md:text-2xl xl:text-3xl">Без экскурсионного обслуживания вход свободный!</p>
+                <div class="flex flex-col gap-4 text-base md:text-lg xl:text-xl">
+                    <p>Экскурсии для сборных групп одиночных посетителей проходят по субботам в 14:00.</p>
+                    <p>Стоимость — 300 рублей (полный билет), <br>200 рублей (льготный билет для студентов, школьников <br> и пенсионеров).</p>
+                    <p>Информацию о мастер-классах и экскурсиях для организованных групп уточняйте по телефону</p>
+                    <p>Возможно посещение музея с индивидуальным экскурсионным обслуживанием.</p>
+                    <p>Расписание ближайших мероприятий на странице новости.</p>
+                </div>
+                <button id="popupToggler" class="w-fit font-medium text-xl md:text-2xl xl:text-3xl uppercase mt-auto px-4 py-2 border-2 border-black rounded-md  hover:bg-black hover:text-white">Записаться</button>
+            </div> 
+            <img src="Assets/Images/schedule/Mascot_raspisanie.png" alt="Маскот думает" class="w-full lg:w-1/2 wow animate__animated animate__fadeInUp">
+        </div>
+        <div class="flex max-lg:flex-col gap-8 wow animate__animated animate__fadeInUp">
+            <div class="flex flex-col gap-6 w-full lg:w-1/2">
+                <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold">Архив выставок</p>
+                <p class="text-base md:text-lg xl:text-xl">Коллекция фотографий в нашем музее насчитывает около 30 000 единиц хранения, включая винтажные отпечатки на различных видах фотобумаги и все основные технологии фотографии — <br> от дагерротипа до современных отпечатков. Мы также храним обширную коллекцию негативов на стекле и пленке. Познакомиться с нашей коллекцией можно на временных выставках, а большая часть фонда доступна для исследовательской работы в цифровом формате.</p>
+                <a href="Pages/expositions.html" class="w-fit font-medium text-xl md:text-2xl xl:text-3xl uppercase mt-auto px-4 py-2 border-2 border-black rounded-md hover:bg-black hover:text-white">Больше выставок</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-medium text-base md:text-lg xl:text-xl w-full lg:w-1/2">
+                <div class="flex flex-col gap-6">
+                    <!-- Ссылка на 1 выставку -->
+                    <a href="Pages/exposition1.html">
+                        <img src="Assets/Images/expositions/exhibition_1.png" alt="Актуальная выставка">
+                    </a>
+                    <p>Актуальная выставка <br>"Внутренний лес"</p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <!-- Ссылка на 2 выставку -->
+                    <a href="Pages/exposition2.html">
+                        <img src="Assets/Images/expositions/expositions_2.jpg" alt="Так далеко">
+                    </a>
+                    <p>Архив <br>"Так далеко, ТАК БЛИЗКО"</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 lg:gap-16 wow animate__animated animate__fadeInUp">
+            <div class="flex items-center gap-4">
+                <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold max-lg:text-center">Коллекция техники</p>
+                <img src="Assets/Images/equipmnet/icon_foto2.png" alt="" class="w-10 xl:w-14 h-10 xl:h-14">
+            </div>
+            <p class="text-base md:text-lg xl:text-xl">Коллекция фототехники МИФ включает фотоаппараты, объективы, экспонометры, лабораторную технику, а также расходные материалы: фотопластинки, пленки, фотобумаги, фотохимию и насчитывает более 3000 единиц хранения.</p>
+            <a href="Pages/equipment.html" class="w-fit font-medium text-xl md:text-2xl xl:text-3xl uppercase px-4 py-2 border-2 border-black rounded-md hover:bg-black hover:text-white">Коллекция техники</a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <img src="Assets/Images/equipmnet/index1.jpg" alt="Техника1">
+                <img src="Assets/Images/equipmnet/index2.jpg" alt="Техника2">
+                <img src="Assets/Images/equipmnet/index3.jpg" alt="Техника3">
+            </div>
+        </div>
+    </main>
+
+    <section id="contacts" class="w-full flex flex-col gap-8 mt-14 md:mt-20 xl:mt-36 wow animate__animated animate__fadeInUp">
+        <div class="container mx-auto max-w-[1340px] px-4">
+            <p class="uppercase text-2xl md:text-3xl xl:text-5xl font-Playfair font-bold max-lg:text-center">Контакты</p>
+        </div>
+        <div class="relative w-full lg:flex lg:items-center lg:h-[425px] xl:h-[600px] 2xl:h-[800px]">
+            <div class="max-lg:container max-lg:mx-auto relative z-[1] flex items-center w-full lg:w-1/2 lg:left-4 min-[1340px]:left-[calc((100vw-1340px)/2+16px)]">
+                <div class="flex flex-col max-lg:text-center max-lg:items-center gap-8 bg-white p-4 md:py-6 md:px-6 w-full xl:py-10 xl:px-10">
+                    <p class="font-medium text-xl md:text-2xl xl:text-3xl">Санкт-Петербург,<br> метро Петроградская,<br> ул. Профессора Попова, 23</p>
+                    <div class="flex items-center gap-10 text-lg md:text-xl xl:text-2xl">
+                        <p>СР-ВС</p>
+                        <p>13:00-21:00</p>
+                    </div>
+                    <div class="flex flex-col gap-2 text-base md:text-lg xl:text-xl">
+                        <a href="tel:+7 (812) 346-18-50">+7 (812) 346-18-50</a>
+                        <a href="tel:+7 (911) 722-92-17">+7 (911) 722-92-17</a>
+                        <a href="mailto:photohismus@gmail.com">photohismus@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="https://vk.com/mif_popova_23" target="_blank">
+                            <img src="Assets/Images/footer/vk.png" alt="VK" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://t.me/mifspb" target="_blank">
+                            <img src="Assets/Images/footer/tg.png" alt="TG" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=79117229217&text&type=phone_number&app_absent=0" target="_blank">
+                            <img src="Assets/Images/footer/whatsapp.png" alt="WA" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://yandex.ru/maps/-/CDr4eLY7" target="_blank" class="lg:absolute lg:inset-0">
+                <img src="Assets/Images/contacts/map.png" alt="" class="lg:h-full lg:w-full lg:object-cover">
+            </a>
+        </div>
+    </section>
+
+    <!-- mt-auto(margin-top: auto) - прибивает футер к низу страницы (максимальный отступ к верху) -->
+    <footer class="mt-auto w-full bg-black py-4 text-white">
+        <!--  заставляет элемент занимать оставшееся пространство, чтобы сдвинуть элемент вниз,
+          py-отступы вертикальные сверху и снизу -->
+        <div class="container mx-auto max-w-[1340px] px-4 flex flex-col gap-12">
+            <!-- mx-auto устанавливает горизонтальные внешние отступы для заставляет элемент занимать оставшееся пространство, чтобы сдвинуть элемент вниз,
+            px-отступы вертикальные сверху и снизу -->
+            <a href="index.html">
+                <img src="Assets/Images/header/logo.png" alt="Логотип" class="w-16">
+            </a>
+            <div class="flex max-lg:flex-col gap-6 xl:gap-8 text-base md:text-lg xl:text-xl">
+                <!-- Назначаем flex  и размещение элементов в колонку при ширине 1024 и меньше, 
+                 назначаем расстояние между дочерними элементами 32px для экранов от 1280px-->
+                <div class="flex flex-col gap-8 font-medium text-xl md:text-2xl xl:text-3xl text-[#c51d41]">
+                    <a href="Pages/news.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Новости</a>
+                    <!-- w-fit назначает ширину элемента по размеру содержимого,
+                     с помощью after создается подчеркивание,
+                     transition-all after:duration задают плавность и время анимации для всевдоэлемента.-->
+                    <a href="Pages/expositions.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Выставки</a>
+                    <a href="Pages/publications.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Публикации</a>
+                    <a href="Pages/equipment.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Коллекция техники</a>
+                    <a href="Pages/tales.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Байки от хранителя</a>
+                    <a href="Pages/reviews.html" class="w-fit flex flex-col after:w-0 after:bg-[#c51d41] after:h-px after:transition-all after:duration-500 hover:after:w-full">Отзывы</a>
+                </div>
+                <!-- разделение между столбиками-->  
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>
+                <!-- разделение между столбиками-->             
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Музей истории фотографии</p>  
+                    <p>Санкт-Петербург,<br> метро Петроградская,<br> ул. Профессора Попова, 23</p>
+                </div>
+                <!-- разделение между столбиками-->                  
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>
+                <!-- разделение между столбиками-->            
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Связать с нами</p>  
+                    <div class="flex flex-col gap-2">
+                        <a class="transition-all duration-500 hover:opacity-50" href="tel:+7 (812) 346-18-50">+7 (812) 346-18-50</a>
+                        <a class="transition-all duration-500 hover:opacity-50" href="tel:+7 (911) 722-92-17">+7 (911) 722-92-17</a>
+                        <a class="transition-all duration-500 hover:opacity-50" href="mailto:photohismus@gmail.com">photohismus@gmail.com</a>
+                    </div>
+                </div>
+                <!-- разделение между столбиками-->  
+                <div class="w-full h-px lg:w-px lg:h-[320px] xl:h-[335px] bg-white"></div>
+                <!-- разделение между столбиками-->            
+                <div class="flex flex-col gap-8">
+                    <p class="font-medium text-lg md:text-xl xl:text-2xl">Больше нас</p>  
+                    <div class="flex items-center gap-6">
+                        <a href="https://vk.com/mif_popova_23" target="_blank">
+                            <img src="Assets/Images/footer/vk.png" alt="VK" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://t.me/mifspb" target="_blank">
+                            <img src="Assets/Images/footer/tg.png" alt="TG" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=79117229217&text&type=phone_number&app_absent=0" target="_blank">
+                            <img src="Assets/Images/footer/whatsapp.png" alt="WA" class="w-10 h-10 xl:w-14 xl:h-14 transition-all duration-500 hover:opacity-50">
+                        </a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </footer><!-- Конец подвала-->
+<!-- Создаем кнопку якоря-->
+    <button id="to-top-button" onclick="goToTop()" class="hidden fixed z-[4] bottom-5 md:bottom-8 right-5 md:right-8 w-12 h-12">
+        <!-- Создаем id для ссылки на кнопку нопку якоря,
+        при клике на onclick выполняется команда goToTop для прокрутки вверх,  hidden скрывает элментк,
+        fixed фиксирует элемент, теперь кнопка будет оставаться на одном месте при прокрутки страницы,
+        z-index для того чтобы данный элемент не перекрывался другими,
+        bottom-отступ от нижнего края элемента,
+        right-отступ от правого края,
+        w и h - указывает ширину и высоту.-->
+        <img src="Assets/Images/footer/arrow.png" alt="Якорь"><!-- Ссылку на изображение иконки-->         
+    </button>
+<!-- Конец кнопки якоря-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="Assets/JS/main.js"></script>
+</body>
+</html>
